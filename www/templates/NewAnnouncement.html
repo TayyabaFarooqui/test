@@ -1,0 +1,75 @@
+<div class= "abc">
+
+
+<div class="bar bar-header bar-clear" style= "margin-top:5px;" >
+  <a  href="#Notifications"><button class="button button-icon icon ion-ios-arrow-back">Back</button></a>
+  <div class="title" id="shadow"> Announcement</div>
+  <button class="button button-icon icon ion-android-attach" ng-click="attachFile()"></button>
+
+</div>
+
+ <div class="list list-inset" style = "margin-top:20%;">
+
+   <!--<ion-content overflow-scroll="true" padding="true" class="has-header">-->
+
+   <form>
+
+       <label class="item item-input" name="Sender">
+         <span class="input-label">SENDER</span>
+         <input type="text" ng-model="nmsg.SENDER">
+       </label>
+     <div style="width:100%;height: 10px;background-color: #000;"></div>
+       <!--<label class="item item-input" name="Reciever">-->
+       <!--<span class="input-label">RECIEVER</span>-->
+       <!--<input type="text" placeholder="Reciever" ng-model="nmsg.RECIEVER">-->
+       <!--</label>-->
+     <label class = "item item-input item-select">
+     <div class = "input-label">
+     Receiver
+     <!--&lt;!&ndash;</div>&ndash;&gt;-->
+     <!--&lt;!&ndash;<div>&ndash;&gt;-->
+     <select ng-model="nmsg.RECIEVER" placeholder="Reciever">
+     <option>Students</option>
+     <option selected>Faculty</option>
+     <option>All</option>
+     </select>
+     </div>
+     </label>
+     <div style="width:100%;height: 10px;background-color: #000;"></div>
+     <label class="item item-input" name="msg">
+     <span class="input-label">Text</span><textarea ng-model="nmsg.NOTICE"> </textarea>
+     </label>
+     <div style="width:100%;height: 10px;background-color: #000;"></div>
+
+
+     </form>
+
+
+
+     <!--<label class = "item item-input item-select">-->
+         <!--<div class = "input-label">-->
+           <!--Receiver-->
+           <!--&lt;!&ndash;</div>&ndash;&gt;-->
+           <!--&lt;!&ndash;<div>&ndash;&gt;-->
+           <!--<select ng-model="nmsg.RECIEVER" placeholder="Reciever">-->
+             <!--<option>Students</option>-->
+             <!--<option selected>Faculty</option>-->
+             <!--<option>All</option>-->
+           <!--</select>-->
+         <!--</div>-->
+       <!--</label>-->
+
+       <!--<label class="item item-input" name="msg">-->
+         <!--<span class="input-label">Text</span><textarea placeholder="Message" ng-model="nmsg.NOTICE"> </textarea>-->
+       <!--</label>-->
+       <!--</form>-->
+
+     </div>
+ <div ng-hide="myVar">
+   <!--<p style="padding-left:10px;float:left;font-weight:700; color:white;background-color: #000;">{{collection.selectedfile}}</p>-->
+   <a style = "float:left;color:white;"class="button button-icon icon ion-android-attach"> <span style="text-size:20px;color:lightgoldenrodyellow;">{{collection.selectedfile}}</span></a>
+</div>
+
+  <div style="width:100%;height: 10px;background-color: #000;"></div>
+  <a  style = "text-decoration:none"><button class="button button-block button-positive" style="color:white;" ng-click="newmsg()">Send</button></a>
+</div>

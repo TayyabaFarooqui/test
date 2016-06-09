@@ -1,0 +1,29 @@
+<div class= "abc">
+  <div class="bar bar-header bar-clear" style= "margin-top:5px;" >
+    <a  href="#Events"><button class="button button-icon icon ion-ios-arrow-back">Back</button></a>
+    <div class="title" id="shadow"> New Event</div>
+    <button class="button button-icon icon ion-android-attach"></button>
+  </div>
+
+  <ion-content class = "has-subheader w3-container" style = "font-family: Comic Sans, Comic Sans MS, cursive;font-weight:10px;position:fixed;">
+<div style="text-align: center;">
+    <form class="w3-container w3-card-4" action="form.asp">
+
+      <input class="w3-input w3-border" placeholder = "Title" name="first" type="text" ng-model="event.title">
+
+      <div style = "padding-top:10%;"> </div>
+
+      <textarea class="w3-input" placeholder="Description..." style="width:100%" required ng-model="event.desc"></textarea>
+
+      <div style = "padding-top:10%;"> </div>
+
+      <a  style = "text-decoration:none">
+        <button class="button buttonfont" style="background-color:rgb(223, 178, 0 );color:white;width:100%;" ng-click="create()">Create Event
+        </button>
+      </a>
+
+    </form>
+  </div>
+  </ion-content>
+
+</div>

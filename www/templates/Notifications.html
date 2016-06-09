@@ -1,0 +1,56 @@
+<div class= "abc">
+
+
+<div class="bar bar-header bar-clear" style= "margin-top:5px;" >
+  <a  href="#AdminHome"><button class="button button-icon icon ion-ios-arrow-back">Back</button></a>
+  <div class="title" id="shadow">Notifications</div>
+  <button class="button button-icon icon ion-plus-round" onclick="location.href='#NewAnnouncement'"></button>
+</div>
+
+
+<div class="padding" style= "margin-top:15%;">
+  <!--<div class="item item-text-wrap" onclick="location.href='#DetailNote'">-->
+    <!--Notification1-->
+  <!--</div>-->
+  <!--<div class="item item-text-wrap">-->
+    <!--Notification2-->
+  <!--</div>-->
+
+<!--<div class="item item-text-wrap">-->
+    <!--Notification3-->
+  <!--</div>-->
+
+  <!--<ion-content overflow-scroll="true" padding="true" class="has-header" ng-controller="mainPageCtrl">-->
+    <!--<ion-content >-->
+    <!--&lt;!&ndash;<div style="margin-right:-20px;">&ndash;&gt;-->
+      <!--&lt;!&ndash;<a ui-sref="newMessage" id="mainPage-button1" style="left:-10px;" class="button button-positive  button-full icon ion-android-create">New message</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--<ion-list  >-->
+      <!--&lt;!&ndash;<ion-item ng-repeat="task in tasks" class="button-positive" ng-controller="viewCtrl as vctrl" ng-click="view(task.N_ID)" ui-sref="view({id:task.N_ID})" >&ndash;&gt;-->
+      <!--<ion-item ng-repeat="task in tasks | orderBy: '-'" class="button-positive" ui-sref="DetailNote({sender:task.SENDER,reciever:task.RECIEVER,notice:task.NOTICE})" >-->
+
+        <!--&lt;!&ndash;  <button class="button-positive" ng-controller="viewCtrl as vctrl" ng-click="view(task.N_ID)" ui-sref="view">View</button> &ndash;&gt;-->
+        <!--<h2>{{task.RECIEVER}} </h2>-->
+        <!--<p>{{task.NOTICE | limitTo:4}}  {{task.N_ID}}...</p>-->
+        <!--&lt;!&ndash;<p>{{task.N_ID}}</p>&ndash;&gt;-->
+
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+  <!--</ion-content>-->
+  <!--<div class="card">-->
+  <ion-list ng-repeat="task in tasks | orderBy: '-' track by $index ">
+
+    <button class="btn btn-danger" ng-click="remove(task)">X</button>
+
+    <a class="item item-avatar"  ui-sref="DetailNote({sender:task.SENDER,reciever:task.RECIEVER,notice:task.NOTICE})" style="background-color:#000;color:white;">
+
+      <img src="bhudda.png">
+      <h2 style="font-weight:700; color:white;">{{task.RECIEVER}}</h2>
+      <p style="color:white">{{task.NOTICE | limitTo:8}}....</p>
+    </a>
+  </ion-list>
+    <!--</div>-->
+
+</div>
+</div>
